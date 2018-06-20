@@ -227,10 +227,6 @@ footer {
 }
 
 
-<!—----------------------
-   | /* media queries */ |
-   ----------------------->
-
 /* menu */
 
 @media screen and (max-width: 800px) {
