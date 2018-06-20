@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:700|Source+Sans+Pro:300,300i,600,600i,700,700i&subset=latin-ext');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,6 +13,15 @@ body {
     background: #222;
     color: #eee;
     font-size: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Comfortaa', cursive;
+	font-weight: 700;
 }
 
 a {
@@ -112,7 +124,7 @@ p:first-child {
 	clear: both;
 }
 
-.aligncenter {
+.alignCenter {
     display: block;
     margin: 1em auto;
 }
@@ -203,10 +215,55 @@ section .content {
 	width: auto;
 }
 
+#menu-button {
+	display: none;
+}
 
 /* footer */
 
 footer {
 	padding: 20px;
 	background: #555;
+}
+
+
+<!—----------------------
+   | /* media queries */ |
+   ----------------------->
+
+/* menu */
+
+@media screen and (max-width: 800px) {
+	
+	
+	#menu-button {
+		display: block;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		background: #eee;
+		color: #000;
+		position: relative;
+	}
+	
+	#menu-button i {
+		transition: all 0.4s;
+	}
+	
+	#menu-button i ~ i {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		top: 0;
+		right: 0;
+		transform: scale(0,0);
+	}
+	
+	nav {
+		display: none;
+	}
+	
 }
